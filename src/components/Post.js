@@ -17,9 +17,12 @@ const Post = ({ postData }) => {
 
   const postComment = async (id) => {
     await axios
-      .post(`http://localhost:8000/api/posts/${id}/comments`, {
-        comment: commetText,
-      })
+      .post(
+        `https://newton-school-backend.vercel.app/api/posts/${id}/comments`,
+        {
+          comment: commetText,
+        }
+      )
       .then((res) => {
         // console.log(res.data.comments);
         setComments(res.data.comments.reverse());

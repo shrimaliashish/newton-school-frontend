@@ -10,7 +10,7 @@ const NewPostModal = (props) => {
 
   const submitHandler = async () => {
     await axios
-      .post(`http://localhost:8000/api/posts`, {
+      .post(`https://newton-school-backend.vercel.app/api/posts`, {
         title,
         comments: [],
       })

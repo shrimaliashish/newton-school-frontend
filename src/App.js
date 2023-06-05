@@ -8,7 +8,9 @@ const App = () => {
   const [posts, setPost] = useState(null);
   const fetchPost = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/allposts");
+      const response = await axios.get(
+        "https://newton-school-backend.vercel.app/api/allposts"
+      );
       console.log(response.data);
       setPost(response.data.reverse());
     } catch (error) {

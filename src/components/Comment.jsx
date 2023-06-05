@@ -18,7 +18,7 @@ const Comment = ({ comment, postId }) => {
   const replyHandler = async (reply) => {
     await axios
       .post(
-        `http://localhost:8000/api/posts/${postId}/comments/${comment._id}/replies`,
+        `https://newton-school-backend.vercel.app/api/posts/${postId}/comments/${comment._id}/replies`,
         { reply: reply }
       )
       .then((res) => {
@@ -42,7 +42,7 @@ const Comment = ({ comment, postId }) => {
   const replyToReplyhandler = async (reply) => {
     await axios
       .post(
-        `http://localhost:8000/api/posts/${postId}/comments/${comment._id}/replies`,
+        `https://newton-school-backend.vercel.app/api/posts/${postId}/comments/${comment._id}/replies`,
         { reply }
       )
       .then((res) => {
