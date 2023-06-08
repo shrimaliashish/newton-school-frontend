@@ -49,7 +49,7 @@ const Comment = ({ comment, postId }) => {
         const tempReplies = res.data.comments.find((data) => {
           return data._id === comment._id;
         });
-        setReplies(tempReplies.replies.reverse());
+        setReplies(tempReplies.replies);
         setShowReplies(true);
       })
       .catch((e) => {
