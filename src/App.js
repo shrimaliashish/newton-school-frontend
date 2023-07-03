@@ -24,6 +24,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <div>s</div>
       <div className="post_container">
         <PostHeader onAdd={fetchPost} />
         <div className="post_inner_container">
